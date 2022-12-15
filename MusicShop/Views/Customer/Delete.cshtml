@@ -1,0 +1,33 @@
+﻿@model MusicShop.DataAccess.ViewModels.CustomerVM
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-3">
+			<h2 class="text-primary">Customer Delete</h2>
+			<hr/>
+		</div>
+		<input type="hidden" asp-for="@Model.Customer.Id" />
+		<div asp-validation-summary=All></div>
+		<div class="row mb-3">
+			<label asp-for="@Model.Customer.Name"></label>
+			<input disabled asp-for="@Model.Customer.Name" class="form-control" />
+			<span asp-validation-for="@Model.Customer.Name" class="text-danger"></span>
+		</div>
+		<div class="row mb-3">
+			<label asp-for="@Model.Customer.Password"></label>
+			<input disabled asp-for="@Model.Customer.Password" class="form-control" />
+			<span asp-validation-for="@Model.Customer.Password" class="text-danger"></span>
+		</div>
+		<div class="row mb-3">
+			<label asp-for="@Model.Customer.Email"></label>
+			<input disabled asp-for="@Model.Customer.Email" class="form-control" />
+			<span asp-validation-for="@Model.Customer.Email" class="text-danger"></span>
+		</div>
+		<button class="btn btn-danger" type="submit">Delete</button>
+	</div>
+	<a class="btn btn-info" asp-action="DetailedList" asp-controller="Customer">Back to List</a>
+</form>
+@section scripts{
+	@{
+		<partinal name="_ValidationScriptsPartial"/>
+	}
+}

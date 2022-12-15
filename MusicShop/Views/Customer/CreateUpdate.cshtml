@@ -1,0 +1,45 @@
+﻿@model MusicShop.DataAccess.ViewModels.CustomerVM
+
+<form method="post" asp-action="CreateUpdate">
+	<input type="hidden" asp-for="Customer.Id" />
+	<div class="border p-3 mt-4">
+		<div class="row pb-3">
+			<h2 class="text-primary">
+				@((Model.Customer == null || Model.Customer.Id == 0) ? "Create" : "Update") Customer</h2>
+				<hr/>
+		</div>
+		<div asp-validation-summary=All></div>
+		<div class="row mb-3">
+			<label asp-for="Customer.Name"></label>
+			<input asp-for="Customer.Name" class="form-control" />
+			<span asp-validation-for="Customer.Name" class="text-danger"></span>
+		</div>
+		<div class="row mb-3">
+			<label asp-for="Customer.Password"></label>
+			<input asp-for="Customer.Password" class="form-control" />
+			<span asp-validation-for="Customer.Password" class="text-danger"></span>
+		</div>
+		<div class="row mb-3">
+			<label asp-for="Customer.Email"></label>
+			<input asp-for="Customer.Email" class="form-control" />
+			<span asp-validation-for="Customer.Email" class="text-danger"></span>
+		</div>
+		@if (Model.Customer == null || Model.Customer.Id == 0)
+		{
+			<button class="btn btn-primary" type="submit">Create</button>
+		}
+		else
+		{
+			<button class="btn btn-primary"type="submit">Update</button>
+		}
+	</div>
+	<a class="btn btn-info" role="button" asp-action="DetailedList" asp-controller="Customer">Back To Customer Details</a>
+	
+</form>
+
+
+@section scripts{    
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}
