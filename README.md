@@ -6,7 +6,7 @@ MusicShop is an application that has been given to me as a school assignment. In
 *I didnt be able to use api controller but if you need api controller i wrote them and they stored in controllers waiting in comment line
 # How to Use The Project
 1) I used db first approach you need to have query code in order to create the database
-[QueryCode.txt](https://github.com/Burakobm/MusicShop/files/10233811/QueryCode.txt)  
+[QueryCode.txt](https://github.com/eylulgumus/MusicShopProject/files/10240044/QueryCode.txt)
 2) You need some nuget packages:    *EntityFramework(6.4.4)  
 *JqueryDataTables.ServerSide.AspNetCoreWeb(4.0.0) 
 *Microsoft.AspNet.Mvc(5.2.9)    *Microsoft.AspNetCore.Identity.EntityFrameworkCore(6.0.11)  *Microsoft.AspNetCore.Mvc.ViewFeatures(2.2.0)  *Microsoft.AspNetCore.ResponseCompression(2.2.0)  *Microsoft.EntityFrameworkCore(6.0.11)  *Microsoft.EntityFrameworkCore.SqlServer(6.0.11)  
